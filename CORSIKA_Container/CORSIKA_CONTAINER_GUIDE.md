@@ -44,7 +44,6 @@ If the simulation does not execute effectively, files may be generated in the `/
 
 The command above requires 3 mandatory parameters. The first parameter represents the minimum zenith angle for your simulation, the second determines the maximum zenith angle, and the third specifies the simulation time.
 
-Este es un comentario para ti James, resulta que el comando de arriba solo borra los archivos que comienzan con go pero no los que comienzan con run, por favor no olvidar de añadir que también borre esos archivos que comienzan con run y que no se ejecutan por que fallo la simulación.
 
 
 
