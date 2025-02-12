@@ -1,0 +1,45 @@
+# This file is only used when you do not want to use the graphical interface.
+# You would need to run ./sim -m input.in.
+
+# verbose determines the level of detail printed to the console about the simulation process.
+# 0: lowest level of detail
+# 3 and higher: prints very detailed information, useful for deep debugging
+
+/control/verbose 0
+/tracking/verbose 0
+#/tracking/storeTrajectory 0
+
+# Read the spectrum file
+/spectrum/readfile particle.shw.bz2
+
+# Define the dimensions of the mother world
+/geometry/worldSizeX 2000 km
+/geometry/worldSizeY 2000 km
+/geometry/worldSizeZ 0.1 km
+
+
+# Define the dimensions of the detector
+/geometry/detectorSizeX 1 km
+/geometry/detectorSizeY 1 km
+/geometry/detectorSizeZ 0.001 km
+
+# Define the position of the detector inside the Geant4 world
+/geometry/detectorPosX 0 km
+/geometry/detectorPosY -5 km
+/geometry/detectorPosZ -0.0495 km
+
+
+# Define the dimensions of the additional cylinder
+/geometry/cylinderRadius 25 km
+/geometry/cylinderHeight 0.095 km
+
+# Define the position of the cylinder inside the Geant4 world
+/geometry/cylinderPosX 0 km
+/geometry/cylinderPosY -5 km
+/geometry/cylinderPosZ 0 km
+
+# Initialize here to update the world with the parameters above
+/run/initialize
+
+# Start the simulation with N events (ex. 1489428)
+/run/beamOn 90000

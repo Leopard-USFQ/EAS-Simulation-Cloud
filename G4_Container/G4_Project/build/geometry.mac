@@ -1,0 +1,28 @@
+# Read the spectrum file
+/spectrum/readfile particle.shw.bz2
+
+# Define the dimensions of the mother world
+/geometry/worldSizeX 2000 km
+/geometry/worldSizeY 2000 km
+/geometry/worldSizeZ 1000 km
+
+# Define the dimensions of the detector
+/geometry/detectorSizeX 100 km
+/geometry/detectorSizeY 100 km
+/geometry/detectorSizeZ 10 km
+
+# Define the position of the detector inside the Geant4 world
+# The initial position of the detector relative to the mother world
+# is (0.,0.,0.). If you do not want to modify this, simply omit these commands.
+/geometry/detectorPosX  0 km
+#/geometry/detectorPosY 0 km
+/geometry/detectorPosZ  300 km
+
+# Define the dimensions of the additional cylinder
+/geometry/cylinderRadius 50 km
+/geometry/cylinderHeight 100 km
+
+# Define the position of the cylinder inside the Geant4 world
+/geometry/cylinderPosX 0 km
+/geometry/cylinderPosY 0 km
+/geometry/cylinderPosZ 30 km
